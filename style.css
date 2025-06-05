@@ -1,0 +1,14 @@
+:root {
+  /* Colors */
+  --clr-primary-50: #f6f6f6;
+  --clr-primary-100: #e7e7e7;
+  --clr-primary-200: #d1d1d1;
+  --clr-primary-300: #b0b0b0;
+  --clr-primary-400: #7f7f7f;
+  --clr-primary-500: #6d6d6d;
+  --clr-primary-600: #5d5d5d;
+  --clr-primary-700: #4f4f4f;
+  --clr-primary-800: #454545;
+  --clr-primary-900: #3d3d3d;
+  --clr-primary-950: #262626;
+}
