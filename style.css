@@ -11,6 +11,7 @@
   --clr-primary-800: #454545;
   --clr-primary-900: #3d3d3d;
   --clr-primary-950: #262626;
+  --clr-primary-black: #151515;
 }
 
 * {
@@ -21,7 +22,42 @@
 
 body {
   font-family: "Arial", sans-serif;
-  background-color: var(--clr-primary-950);
+  background-color: var(--clr-primary-black);
   color: var(--clr-primary-50);
   line-height: 1.6;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-family: "Alfa Slab One", sans-serif;
+  font-size: 2.5rem;
+  color: var(--clr-primary-50);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+nav a,
+nav a:visited {
+  color: var(--clr-primary-50);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--clr-primary-200);
+}
+
+nav a:active {
+  color: var(--clr-primary-300);
 }
