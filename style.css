@@ -51,6 +51,33 @@ body {
   line-height: 1.6;
 }
 
+h2 {
+  margin-bottom: 1rem;
+}
+
+.button-container {
+  margin: 2rem auto;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--clr-primary-50);
+  text-decoration: none;
+  color: var(--clr-primary-black);
+  background-color: var(--clr-primary-50);
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button:visited {
+  color: var(--clr-primary-50);
+}
+
+.button:hover {
+  background-color: var(--clr-primary-black);
+  color: var(--clr-primary-50);
+}
+
 header {
   position: fixed;
   z-index: 100;
@@ -184,4 +211,6 @@ nav a:active {
 #contact {
   height: 800px;
   scroll-margin-top: var(--scroll-margin);
+  padding: 2rem var(--content-width-padding);
+  text-align: center;
 }
