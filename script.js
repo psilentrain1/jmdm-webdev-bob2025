@@ -2,7 +2,7 @@ window.addEventListener("scroll", function (event) {
   const topDistance = this.window.pageYOffset;
   const layers = this.document.querySelectorAll("[data-type='parallax']");
 
-  for (layer of layers) {
+  for (let layer of layers) {
     const depth = layer.getAttribute("data-depth");
     const movement = -(topDistance * depth);
     const translate3d = "translate3d(0, " + movement + "px, 0)";
