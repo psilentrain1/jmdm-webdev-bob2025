@@ -1,3 +1,8 @@
+const hero = document.getElementById("hero");
+const heroHeight = hero ? hero.offsetHeight : 0;
+const header = document.querySelector("header");
+const headerHeight = header ? header.offsetHeight : 0;
+
 document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", function (event) {
     const topDistance = this.window.pageYOffset;
@@ -13,11 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
       layer.style["-o-transform"] = translate3d;
       layer.style.transform = translate3d;
     }
-
-    const hero = document.getElementById("hero");
-    const heroHeight = hero ? hero.offsetHeight : 0;
-    const header = document.querySelector("header");
-    const headerHeight = header ? header.offsetHeight : 0;
 
     if (header) {
       if (topDistance > heroHeight - headerHeight) {
