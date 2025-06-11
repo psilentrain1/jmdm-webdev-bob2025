@@ -216,6 +216,7 @@ nav a:active {
 
 #media {
   scroll-margin-top: var(--scroll-margin);
+  padding: 2rem var(--content-width-padding);
 }
 
 #services {
