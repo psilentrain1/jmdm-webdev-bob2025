@@ -201,7 +201,15 @@ nav a:active {
 }
 
 #history {
+  padding: 2rem var(--content-width-padding);
   scroll-margin-top: var(--scroll-margin);
+  background-color: var(--clr-primary-50);
+  color: var(--clr-primary-black);
+}
+
+#history h2 {
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 #media {

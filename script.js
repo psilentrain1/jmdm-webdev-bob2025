@@ -28,3 +28,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+// History section
+const historySection = document.getElementById("history");
+
+const firstYear = 2003;
+const lastYear = new Date().getFullYear();
+
+// Find a library to show timeline
+// I want it to be a horizontal line
