@@ -12,6 +12,8 @@
   --clr-primary-900: #3d3d3d;
   --clr-primary-950: #262626;
   --clr-primary-black: #151515;
+
+  --hero-height: 800px;
 }
 
 * {
@@ -28,6 +30,10 @@ body {
 }
 
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -60,4 +66,53 @@ nav a:hover {
 
 nav a:active {
   color: var(--clr-primary-300);
+}
+
+#hero {
+  height: var(--hero-height);
+  overflow: hidden;
+  position: relative;
+}
+
+.layer {
+  background-position: bottom center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: var(--hero-height);
+  position: fixed;
+  z-index: -1;
+}
+
+#hero,
+.layer {
+  min-height: 800px;
+  max-width: 1900px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.layer-bg {
+  background-image: url(images/hero-bg.png);
+  background-size: cover;
+}
+
+.layer-hero {
+  background-image: url(images/hero-hero.png);
+  background-size: cover;
+}
+
+.layer-mid {
+  background-image: url(images/hero-mid.png);
+  background-size: cover;
+}
+
+.layer-fg {
+  background-image: url(images/hero-fg.png);
+  background-size: cover;
+}
+
+#about {
+  background-color: var(--clr-primary-black);
+  height: 250px;
 }
