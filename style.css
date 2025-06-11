@@ -14,6 +14,9 @@
   --clr-primary-black: #151515;
 
   --hero-height: 800px;
+
+  --content-width: 1200px;
+  --content-width-padding: calc((100vw - clamp(800px, var(--content-width), 95vw)) / 2);
 }
 
 * {
@@ -34,6 +37,7 @@ header {
   top: 0;
   left: 0;
   width: 100vw;
+  padding: 0 var(--content-width-padding);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -114,5 +118,26 @@ nav a:active {
 
 #about {
   background-color: var(--clr-primary-black);
-  height: 250px;
+  padding: 2rem var(--content-width-padding);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.about-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image img {
+  width: 80%;
+}
+
+.about-content {
+  grid-column: 2 / span 2;
+}
+
+.about-content p {
+  margin-bottom: 1rem;
 }
