@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const headerHeight = header ? header.offsetHeight : 0;
 
     if (header) {
-      console.log(topDistance, heroHeight - headerHeight);
       if (topDistance > heroHeight - headerHeight) {
         header.classList.add("header-bg");
       } else {
