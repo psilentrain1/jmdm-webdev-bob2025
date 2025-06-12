@@ -30,10 +30,20 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // History section
-const historySection = document.getElementById("history");
-
-const firstYear = 2003;
-const lastYear = new Date().getFullYear();
-
-// Find a library to show timeline
-// I want it to be a horizontal line
+const historyList = document.getElementById("historyList");
+const historyData = fetch("history.json")
+  .then((response) => response.json())
+  .then((data) => {
+    data.forEach((item) => {
+      let yearRange;
+      if (item.startYear === item.endYear) {
+        yearRange = item.startYear;
+      } else {
+        yearRange = `${item.startYear} - ${item.endYear}`;
+      }
+      const position = document.createElement("p");
+      position.innerHTML = `<strong>${item.organization}</strong> ${item.role} <em>${yearRange}</em>`;
+      historyList.appendChild(position);
+    });
+  })
+  .catch((error) => console.error("Error loading history data:", error));
