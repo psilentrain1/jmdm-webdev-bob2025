@@ -217,7 +217,6 @@ nav a:active {
 }
 
 #contact {
-  height: 800px;
   scroll-margin-top: var(--scroll-margin);
   padding: 2rem var(--content-width-padding);
   text-align: center;
