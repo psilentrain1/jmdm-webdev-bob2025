@@ -216,6 +216,18 @@ nav a:active {
   scroll-margin-top: var(--scroll-margin);
 }
 
+#services {
+  padding: 2rem var(--content-width-padding);
+  text-align: center;
+}
+
+.services-list {
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
 #contact {
   scroll-margin-top: var(--scroll-margin);
   padding: 2rem var(--content-width-padding);
