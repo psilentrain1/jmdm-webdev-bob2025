@@ -168,6 +168,8 @@ nav a:active {
 .layer-fg {
   background-image: url(images/hero-fg.png);
   background-size: cover;
+  position: absolute;
+  z-index: -1;
 }
 
 .content {
