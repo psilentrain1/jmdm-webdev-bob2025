@@ -1,9 +1,11 @@
-const hero = document.getElementById("hero");
+const hero = document.getElementById("top");
 const heroHeight = hero ? hero.offsetHeight : 0;
 const header = document.querySelector("header");
 const headerHeight = header ? header.offsetHeight : 0;
 
 document.addEventListener("DOMContentLoaded", function () {
+  const top = document.getElementById("toTop");
+
   window.addEventListener("scroll", function (event) {
     const topDistance = this.window.pageYOffset;
     const layers = this.document.querySelectorAll("[data-type='parallax']");
@@ -24,6 +26,14 @@ document.addEventListener("DOMContentLoaded", function () {
         header.classList.add("header-bg");
       } else {
         header.classList.remove("header-bg");
+      }
+    }
+
+    if (top) {
+      if (topDistance > heroHeight - headerHeight) {
+        top.classList.add("top-enable");
+      } else {
+        top.classList.remove("top-enable");
       }
     }
   });
