@@ -118,11 +118,11 @@ nav a:visited {
 }
 
 nav a:hover {
-  color: var(--clr-primary-200);
+  color: var(--clr-secondary-600);
 }
 
 nav a:active {
-  color: var(--clr-primary-300);
+  color: var(--clr-secondary-800);
 }
 
 #top {
@@ -178,7 +178,7 @@ nav a:active {
 #about {
   padding: 2rem var(--content-width-padding);
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 2rem;
   scroll-margin-top: var(--scroll-margin);
 }
@@ -191,10 +191,6 @@ nav a:active {
 
 .about-image img {
   width: 80%;
-}
-
-.about-content {
-  grid-column: 2 / span 2;
 }
 
 .about-content p {
@@ -290,7 +286,7 @@ footer {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: var(--clr-secondary-700);
+  background-color: var(--clr-primary-100);
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
   z-index: 20;
   transition: visibility 0.3s, opacity 0.3s ease;
@@ -309,7 +305,7 @@ footer {
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
-  color: var(--clr-primary-50);
+  color: var(--clr-primary-950);
 }
 
 .top-enable {
