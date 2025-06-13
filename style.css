@@ -32,6 +32,7 @@
 
   --content-width: 1200px;
   --content-width-padding: calc((100vw - clamp(800px, var(--content-width), 95vw)) / 2);
+  --mobile-padding: 2rem 15px;
 }
 
 * {
@@ -101,6 +102,13 @@ header {
   font-family: "Alfa Slab One", sans-serif;
   font-size: 2.5rem;
   color: var(--clr-primary-50);
+}
+
+#mobile-hamburger {
+  display: none;
+  margin: 0 10px;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
 nav ul {
@@ -214,6 +222,7 @@ nav a:active {
 }
 
 #services {
+  scroll-margin-top: var(--scroll-margin);
   padding: 2rem var(--content-width-padding);
   text-align: center;
 }
@@ -311,4 +320,57 @@ footer {
 .top-enable {
   visibility: visible;
   opacity: 1;
+}
+
+@media screen and (max-width: 800px) {
+  header {
+    padding: var(--mobile-padding);
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  #mobile-hamburger {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    background-color: var(--clr-primary-600);
+    padding: 1rem 2rem;
+  }
+
+  .menu-visible {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  nav ul > li {
+    font-size: 1.5rem;
+  }
+
+  #about {
+    display: flex;
+    flex-direction: column;
+    padding: var(--mobile-padding);
+  }
+
+  #history,
+  #services,
+  #contact {
+    padding: var(--mobile-padding);
+  }
+
+  .services-list {
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
 }

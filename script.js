@@ -5,6 +5,8 @@ const headerHeight = header ? header.offsetHeight : 0;
 
 document.addEventListener("DOMContentLoaded", function () {
   const top = document.getElementById("toTop");
+  const hamburger = document.getElementById("mobile-hamburger");
+  const nav = document.getElementById("nav");
 
   window.addEventListener("scroll", function (event) {
     const topDistance = this.window.pageYOffset;
@@ -35,6 +37,17 @@ document.addEventListener("DOMContentLoaded", function () {
       } else {
         top.classList.remove("top-enable");
       }
+    }
+  });
+
+  hamburger.addEventListener("click", function (e) {
+    e.stopPropagation();
+    nav.classList.toggle("menu-visible");
+  });
+
+  document.addEventListener("click", function (e) {
+    if ((nav.contains(e.target) && e.target.tagName === "A") || (!nav.contains(e.target) && !hamburger.contains(e.target))) {
+      nav.classList.remove("menu-visible");
     }
   });
 });
