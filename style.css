@@ -108,6 +108,7 @@ header {
   display: none;
   margin: 0 10px;
   font-size: 2rem;
+  cursor: pointer;
 }
 
 nav ul {
@@ -221,6 +222,7 @@ nav a:active {
 }
 
 #services {
+  scroll-margin-top: var(--scroll-margin);
   padding: 2rem var(--content-width-padding);
   text-align: center;
 }
@@ -339,7 +341,7 @@ footer {
     top: 5px;
     right: 5px;
     background-color: var(--clr-primary-600);
-    padding: 20px;
+    padding: 1rem 2rem;
   }
 
   .menu-visible {
