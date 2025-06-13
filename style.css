@@ -61,7 +61,6 @@ h2 {
 
 .button {
   padding: 0.5rem 1rem;
-  border: 2px solid var(--clr-primary-50);
   text-decoration: none;
   color: var(--clr-primary-black);
   background-color: var(--clr-primary-50);
@@ -234,10 +233,30 @@ nav a:active {
   scroll-margin-top: var(--scroll-margin);
   padding: 2rem var(--content-width-padding);
   text-align: center;
+  background-color: var(--clr-secondary-700);
+}
+
+.social-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  max-width: 400px;
+  margin: 0 auto;
+  font-size: 2rem;
+}
+
+.social-container a,
+.social-container a:visited {
+  color: var(--clr-primary-50);
+  transition: color 0.3s ease;
+}
+
+.social-container a:hover {
+  color: var(--clr-primary-black);
 }
 
 footer {
-  background-color: black;
+  background-color: var(--clr-primary-black);
   color: var(--clr-primary-50);
   padding: 0.5rem 0;
   font-size: 0.9rem;
