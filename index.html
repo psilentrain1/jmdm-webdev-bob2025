@@ -16,6 +16,19 @@
     <script defer src="https://analytics.jamesdraketech.com/script.js" data-website-id="924528e1-5c71-451d-9957-0893f9717a2a"></script>
   </head>
   <body>
+    <div id="cta" class="cta">
+      <div class="cta-container">
+        <!-- <span class="close">&times;</span> -->
+        <div class="cta-content">
+          <div class="cta-close">
+            <button id="ctaBtnClose">X</button>
+          </div>
+          <div class="cta-buttons">
+            <button id="ctaBtnLink" data-umami-event="cta-summer2025-linkClick">Learn More!</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <header>
       <div class="title">Beard on Bass</div>
       <nav id="nav">
@@ -107,12 +120,14 @@
             Need bass guitar for a project or show? Do you have an upcoming tour? <br />
             Let me know. I’m available to travel anywhere in the world!
           </p>
-          <p class="button-container"><a href="mailto:james@beardonbass.com" class="button contact-button">Reach out!</a></p>
+          <p class="button-container">
+            <a href="mailto:james@beardonbass.com" class="button contact-button" data-umami-event="contact-emailButton">Reach out!</a>
+          </p>
           <div class="social-container">
-            <a href="https://www.instagram.com/beardonbass/"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://soundcloud.com/beardonbass"><i class="fa-brands fa-soundcloud"></i></a>
-            <a href="https://x.com/beardonbass_"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://www.tiktok.com/@beardonbass"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://www.instagram.com/beardonbass/" data-umami-event="social-Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://soundcloud.com/beardonbass" data-umami-event="social-SoundCloud"><i class="fa-brands fa-soundcloud"></i></a>
+            <a href="https://x.com/beardonbass_" data-umami-event="social-X/Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.tiktok.com/@beardonbass" data-umami-event="social-TikTok"><i class="fa-brands fa-tiktok"></i></a>
           </div>
         </section>
       </div>

@@ -1,3 +1,7 @@
+// Feature flags
+const ffCtaActive = true;
+// ---- //
+
 const hero = document.getElementById("top");
 const heroHeight = hero ? hero.offsetHeight : 0;
 const header = document.querySelector("header");
@@ -70,3 +74,29 @@ const historyData = fetch("history.json")
     });
   })
   .catch((error) => console.error("Error loading history data:", error));
+
+// CTA
+const cta = document.getElementById("cta");
+const ctaClose = document.getElementById("ctaBtnClose");
+const ctaLink = document.getElementById("ctaBtnLink");
+const ctaURL = "http://www.fiverr.com/s/bdwq69a";
+
+if (ffCtaActive) {
+  if (sessionStorage.getItem("ctaShown") == null) {
+    cta.style.display = "block";
+    sessionStorage.setItem("ctaShown", true);
+  }
+
+  ctaClose.addEventListener("click", function (e) {
+    e.stopPropagation();
+    cta.style.display = "none";
+    sessionStorage.setItem("ctaShown", true);
+  });
+
+  ctaLink.addEventListener("click", function (e) {
+    e.stopPropagation();
+    window.open(ctaURL, "_blank");
+    cta.style.display = "none";
+    sessionStorage.setItem("ctaShown", true);
+  });
+}
