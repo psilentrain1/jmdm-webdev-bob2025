@@ -1,5 +1,5 @@
 // Feature flags
-const ffCtaActive = true;
+const ffCtaActive = false;
 // ---- //
 
 const hero = document.getElementById("top");
